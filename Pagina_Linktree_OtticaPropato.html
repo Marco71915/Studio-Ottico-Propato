@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ottica Propato - Link Page</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%; /* Assicura che il body riempia tutta l'altezza */
+    }
+    body {
       font-family: Arial, sans-serif;
-      background: url('sfondo.jpg') no-repeat center center fixed; /* Immagine di sfondo */
-      background-size: cover; /* L'immagine copre tutto lo schermo */
+      background: linear-gradient(to bottom, white 10%, red 100%); /* più bianco all'inizio */
       text-align: center;
       padding: 2rem;
       color: white;
+      min-height: 100vh; /* Garantisce sfondo pieno anche con poco contenuto */
+      box-sizing: border-box;
     }
     .logo {
       max-width: 300px; /* Logo più grande */
@@ -76,7 +81,7 @@
   </div>
 
   <!-- Bottone Contattaci -->
-  <a class="link-button" href="tel:3404030106 ">
+  <a class="link-button" href="tel:3921298514 ">
     <img class="icon phone-icon" src="https://cdn-icons-png.flaticon.com/128/9946/9946341.png" alt="Telefono" />
     Contattaci
   </a>
@@ -86,7 +91,6 @@
       openAppOrWeb('instagram://user?username=studiootticopropato', 'https://www.instagram.com/studiootticopropato/');
     });
 
-    // Funzione generica per tentare apertura app + fallback web
     function openAppOrWeb(appUrl, webUrl) {
       const start = Date.now();
       window.location = appUrl;
@@ -97,8 +101,8 @@
       }, 1000);
     }
 
-   document.getElementById('tiktokButton').addEventListener('click', function () {
-   openAppOrWeb('snssdk1233://user/profile/6840022407621968901', 'https://www.tiktok.com/@_studiootticopropato_');
+    document.getElementById('tiktokButton').addEventListener('click', function () {
+      openAppOrWeb('snssdk1233://user/profile/6840022407621968901', 'https://www.tiktok.com/@_studiootticopropato_');
     });
   </script>
 </body>
